@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorable Moments | Siju Thimothy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="memories-page">
+
+        <a href="personal.html" class="back-link">← Back to Personal</a>
+
+        <h1>Memorable Moments</h1>
+
+        <p class="memories-intro">
+            Special moments, beautiful memories and experiences
+            that I always cherish.
+        </p>
+
+        <div class="memories-grid">
+
+            <div class="moment-item">
+                <img src="images/gallery/photo1.jpg"
+                     alt="Munnar Trip"
+                     data-title="Munnar Trip">
+            </div>
+
+            <div class="moment-item">
+                <img src="images/gallery/photo2.jpg"
+                     alt="Family Celebration"
+                     data-title="Family Celebration">
+            </div>
+
+            <div class="moment-item">
+                <img src="images/gallery/photo3.jpg"
+                     alt="Special Moment"
+                     data-title="Special Moment">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Lightbox -->
+
+    <div id="imageLightbox" class="image-lightbox">
+
+        <button class="lightbox-prev">&#10094;</button>
+
+        <div class="lightbox-content">
+
+            <img id="lightboxImage" src="" alt="Memorable Moment">
+
+            <h3 id="lightboxTitle"></h3>
+
+        </div>
+
+        <button class="lightbox-next">&#10095;</button>
+
+        <span class="lightbox-close">&times;</span>
+
+    </div>
+
+
+    <script>
+
+        const galleryImages =
+            document.querySelectorAll(".moment-item img");
+
+        const lightbox =
+            document.getElementById("imageLightbox");
+
+        const lightboxImage =
+            document.getElementById("lightboxImage");
+
+        const lightboxTitle =
+            document.getElementById("lightboxTitle");
+
+        const closeButton =
+            document.querySelector(".lightbox-close");
+
+        const previousButton =
+            document.querySelector(".lightbox-prev");
+
+        const nextButton =
+            document.querySelector(".lightbox-next");
+
+        let currentImage = 0;
+        let slideshow;
+
+
+        function showImage(index) {
+
+            currentImage =
+                (index + galleryImages.length)
+                % galleryImages.length;
+
+            lightboxImage.src =
+                galleryImages[currentImage].src;
+
+            lightboxTitle.textContent =
+                galleryImages[currentImage].dataset.title;
+
+        }
+
+
+        galleryImages.forEach((image, index) => {
+
+            image.addEventListener("click", () => {
+
+                lightbox.classList.add("active");
+
+                showImage(index);
+
+                startSlideshow();
+
+            });
+
+        });
+
+
+        function startSlideshow() {
+
+            clearInterval(slideshow);
+
+            slideshow = setInterval(() => {
+
+                showImage(currentImage + 1);
+
+            }, 4000);
+
+        }
+
+
+        nextButton.addEventListener("click", () => {
+
+            showImage(currentImage + 1);
+
+            startSlideshow();
+
+        });
+
+
+        previousButton.addEventListener("click", () => {
+
+            showImage(currentImage - 1);
+
+            startSlideshow();
+
+        });
+
+
+        closeButton.addEventListener("click", closeLightbox);
+
+
+        lightbox.addEventListener("click", (event) => {
+
+            if (event.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        });
+
+
+        function closeLightbox() {
+
+            lightbox.classList.remove("active");
+
+            clearInterval(slideshow);
+
+        }
+
+    </script>
+
+</body>
+</html>
