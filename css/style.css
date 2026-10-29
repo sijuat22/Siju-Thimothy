@@ -3227,3 +3227,75 @@ body {
         grid-template-columns: 1fr !important;
     }
 }
+/* =========================================
+   MOBILE RESPONSIVE FIXES FOR HOME PAGE
+========================================= */
+
+@media (max-width: 768px) {
+    /* Navbar styling for mobile */
+    nav {
+        flex-direction: column;
+        padding: 12px 5%;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    /* Hero Section: Stack Left & Right columns on mobile */
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 120px 5% 50px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+    }
+
+    .hero-left h2 {
+        font-size: 20px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Hero About Box */
+    .hero-about {
+        padding: 25px 20px;
+        min-height: auto;
+    }
+
+    .hero-about h2 {
+        font-size: 24px;
+    }
+
+    .hero-about p {
+        font-size: 14px;
+    }
+
+    /* Contact Layout */
+    .contact {
+        padding: 40px 5%;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .map-container {
+        height: 180px;
+    }
+}
