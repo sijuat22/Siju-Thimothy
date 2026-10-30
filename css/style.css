@@ -3111,9 +3111,6 @@ body {
     overflow: hidden !important;
     padding-bottom: 20px !important;
 }
-    gap: 15px;
-    margin-bottom: 40px;
-}
 
 /* 2. മൗസ് വെക്കുമ്പോൾ (Hover) ചെറിയ സൂം എഫക്റ്റ് */
 .journey-card {
@@ -3335,4 +3332,25 @@ body {
 .journey-card .card-content p {
     font-size: 13px !important;
     line-height: 1.6 !important;
+}
+/* =========================================
+   MOBILE VIEW FIX FOR CAREER CARDS
+========================================= */
+
+@media (max-width: 900px) {
+    .timeline-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* മൊബൈലിൽ കാർഡുകൾ ഒന്നിന് താഴെ ഒന്നായി വരും */
+        gap: 20px !important;
+        padding: 0 15px !important;
+        overflow: visible !important;
+    }
+
+    .journey-card {
+        width: 100% !important;
+    }
+
+    .journey-card .card-image {
+        height: 180px !important; /* മൊബൈലിൽ ചിത്രത്തിന്റെ ഉയരം കൃത്യമായി ക്രമീകരിക്കാൻ */
+    }
 }
