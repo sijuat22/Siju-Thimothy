@@ -3108,8 +3108,9 @@ body {
 }
 /* 1. 7 കാർഡുകളും ഒരേ നിരയിൽ (Single Row) വരുന്ന ഗ്രിഡ് */
 .timeline-container {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr) !important;
+    overflow: hidden !important;
+    padding-bottom: 20px !important;
+}
     gap: 15px;
     margin-bottom: 40px;
 }
@@ -3298,4 +3299,40 @@ body {
     .map-container {
         height: 180px;
     }
+}
+/* =========================================
+   CAREER JOURNEY CARDS SIZE FIX
+========================================= */
+
+/* കാർഡുകൾ അടങ്ങിയിരിക്കുന്ന പ്രധാന ഭാഗത്തിന്റെ വീതി കൂട്ടുന്നു */
+.career-journey-section {
+    max-width: 1450px !important;
+    padding: 0 20px;
+}
+
+/* 7 കാർഡുകൾ കൂടുതൽ സ്ഥലമെടുത്ത് വലുതായി വരാൻ */
+.timeline-container {
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 18px !important;
+    max-width: 1400px;
+    margin: 0 auto 50px auto;
+}
+
+/* കാർഡിന്റെ അകത്തെ ചിത്രത്തിന്റെ ഉയരം കൂട്ടുന്നു */
+.journey-card .card-image {
+    height: 160px !important; 
+}
+
+/* കാർഡിനുള്ളിലെ ടെക്സ്റ്റ് കുറച്ചുകൂടി വ്യക്തമായി കാണാൻ */
+.journey-card .card-content {
+    padding: 22px 16px 20px 16px !important;
+}
+
+.journey-card .card-content h3 {
+    font-size: 17px !important;
+}
+
+.journey-card .card-content p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
 }
