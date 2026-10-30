@@ -2814,33 +2814,24 @@ body {
     padding-bottom: 10px;
 }
 
-/* =========================================
-   MOBILE VIEW ALIGNMENT FIX FOR CAREER CARDS
-========================================= */
-
-@media (max-width: 1400px) {
+/* റെസ്പോൻസീവ് ഡിസൈൻ: ചെറിയ സ്ക്രീനുകളിൽ (ടോപ്/ടാബ്‌ലെറ്റ്) കാർഡുകൾ ഭംഗിയായി ക്രമീകരിക്കാൻ */
+@media (max-width: 1200px) {
     .timeline-container {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .timeline-container {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .timeline-container {
-        grid-template-columns: 1fr !important;
-    }
-    
-    /* മൊബൈലിൽ കാർഡിന്റെ അകത്തെ ഫോട്ടോയുടെ വലിപ്പം കൃത്യമായി ക്രമീകരിക്കാൻ */
-    .journey-card .card-image {
-        height: 150px !important;
+        grid-template-columns: 1fr;
     }
 }
-
 /* പഴയതുപോലെ കൃത്യമായി കാർഡുകൾ ഒരേ അളവിൽ വരാൻ */
 .timeline-container {
     display: grid;
