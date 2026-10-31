@@ -3354,3 +3354,43 @@ body {
         height: 180px !important; /* മൊബൈലിൽ ചിത്രത്തിന്റെ ഉയരം കൃത്യമായി ക്രമീകരിക്കാൻ */
     }
 }
+/* =========================================
+   CAREER PAGE MATCHING HERO BACKGROUND
+========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 15% 15%, rgba(59,130,246,.28), transparent 32%),
+                radial-gradient(circle at 85% 80%, rgba(14,165,233,.18), transparent 30%),
+                linear-gradient(135deg, #071426 0%, #102747 52%, #172554 100%) !important;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(147,197,253,.15);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero::before { 
+    width: 280px; 
+    height: 280px; 
+    top: -150px; 
+    right: 8%; 
+}
+
+.hero::after { 
+    width: 190px; 
+    height: 190px; 
+    bottom: -115px; 
+    left: 7%; 
+}
+
+/* പ്രൊഫൈൽ ഫോട്ടോയ്ക്ക് ക്ലാസിക് ബോർഡറും സോഫ്റ്റ് ഷാഡോയും */
+.profile-image {
+    border: 5px solid rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35) !important;
+}
