@@ -4142,16 +4142,49 @@ section {
         margin: 0 auto 15px auto !important;
     }
 }
-/* ===== Profile Photo Mobile View Fix ===== */
+/* ===== Home Screen Mobile View Fix (Photo & Layout) ===== */
 @media (max-width: 768px) {
-    /* പ്രൊഫൈൽ ഫോട്ടോ നിൽക്കുന്ന കണ്ടെയ്നറും ഇമേജും മൊബൈലിന് അനുസരിച്ച് ക്രമീകരിക്കുന്നു */
-    .profile-img, .hero-avatar, img[alt*="Siju"], .about-img img {
-        width: 160px !important;
-        height: 160px !important;
+    /* നാവിഗേഷൻ ബാർ മൊബൈലിൽ ഒന്നിനു താഴെ ഒന്നായി ക്രമീകരിക്കുന്നു */
+    nav {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 15px !important;
+        gap: 10px !important;
+    }
+
+    nav ul {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px 12px !important;
+        padding: 0 !important;
+    }
+
+    /* ഹെറോ സെക്ഷൻ മൊബൈലിൽ സിംഗിൾ കോളമാക്കുന്നു */
+    .hero {
+        flex-direction: column !important;
+        display: flex !important;
+        padding: 40px 20px !important;
+        text-align: center !important;
+    }
+
+    .hero-left, .hero-about {
+        width: 100% !important;
         max-width: 100% !important;
+    }
+
+    /* പ്രൊഫൈൽ ഫോട്ടോ കൃത്യമായ വട്ടത്തിലുള്ള ഷേപ്പിൽ സെന്ററിൽ വരുത്തുന്നു */
+    .profile-image {
+        width: 150px !important;
+        height: 150px !important;
+        max-width: 150px !important;
+        max-height: 150px !important;
         object-fit: cover !important;
         border-radius: 50% !important;
         margin: 0 auto 20px auto !important;
         display: block !important;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
     }
 }
