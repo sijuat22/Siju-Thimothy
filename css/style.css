@@ -614,26 +614,29 @@ nav ul li a:hover{
     box-shadow:0 8px 18px rgba(37,99,235,.15);
     border-color:#2563eb;
 }
-/* ===== Professional Summary ===== */
 
-.summary{
-    padding:80px 10%;
-    background:#f8fafc;
-    text-align:center;
+/* ===== Professional Summary Styling Update ===== */
+
+.summary {
+    padding: 70px 10%;
+    background: #ffffff !important; /* വെളുത്ത ബാക്ക്ഗ്രൗണ്ട് */
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.summary h2{
-    font-size:38px;
-    color:#0f172a;
-    margin-bottom:30px;
+.summary h2 {
+    font-size: 36px;
+    color: #0f172a !important; /* കറുത്ത/ഡാർക്ക് ഹെഡിംഗ് */
+    margin-bottom: 20px;
 }
 
-.summary p{
-    max-width:850px;
-    margin:auto;
-    font-size:18px;
-    line-height:1.9;
-    color:#555;
+.summary p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #475569 !important; /* വായിക്കാൻ എളുപ്പമുള്ള ഗ്രേ കളർ ടെക്സ്റ്റ് */
 }
 
 /* ===== Professional Highlights ===== */
@@ -3393,4 +3396,734 @@ body {
 .profile-image {
     border: 5px solid rgba(255, 255, 255, 0.95) !important;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35) !important;
+}
+/* ===== 6-Cards Mind Map Section (Compact Spacing) ===== */
+.mindmap-section {
+    padding: 80px 8%;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, #f1f5f9 80%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.mindmap-wrapper.six-cards {
+    position: relative;
+    max-width: 950px;
+    height: 480px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Central Circle */
+.six-cards .center-circle {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.2);
+    z-index: 2;
+    border: 3px solid #ffffff;
+}
+
+.six-cards .center-glow {
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    opacity: 0.25;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+.six-cards .center-content i {
+    font-size: 26px;
+    color: #4f46e5;
+    margin-bottom: 4px;
+}
+
+.six-cards .center-content h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Common Card Style */
+.six-cards .node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    padding: 10px 16px 10px 10px;
+    border-radius: 50px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+}
+
+/* 6 Nodes Positions & Colors (കടുത്ത അടുപ്പത്തിൽ ക്രമീകരിച്ചിരിക്കുന്നു) */
+
+/* 1. System Admin (Top Left) */
+.six-cards .node-1 {
+    top: 20px;
+    left: 80px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 16px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+.six-cards .node-1 .node-text { text-align: right; }
+.six-cards .node-1 .icon-circle { background: linear-gradient(135deg, #2563eb, #06b6d4); }
+.six-cards .node-1 h4 { color: #1e40af; }
+
+/* 2. Networking (Mid Left) */
+.six-cards .node-2 {
+    top: 190px;
+    left: 30px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 16px;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+.six-cards .node-2 .node-text { text-align: right; }
+.six-cards .node-2 .icon-circle { background: linear-gradient(135deg, #059669, #10b981); }
+.six-cards .node-2 h4 { color: #065f46; }
+
+/* 3. Hardware (Bottom Left) */
+.six-cards .node-3 {
+    bottom: 20px;
+    left: 80px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 16px;
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+}
+.six-cards .node-3 .node-text { text-align: right; }
+.six-cards .node-3 .icon-circle { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+.six-cards .node-3 h4 { color: #9a3412; }
+
+/* 4. Printer Service (Top Right) */
+.six-cards .node-4 {
+    top: 20px;
+    right: 80px;
+    background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+}
+.six-cards .node-4 .icon-circle { background: linear-gradient(135deg, #e11d48, #fb7185); }
+.six-cards .node-4 h4 { color: #9f1239; }
+
+/* 5. CCTV Systems (Mid Right) */
+.six-cards .node-5 {
+    top: 190px;
+    right: 30px;
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+}
+.six-cards .node-5 .icon-circle { background: linear-gradient(135deg, #9333ea, #ec4899); }
+.six-cards .node-5 h4 { color: #6b21a8; }
+
+/* 6. Software (Bottom Right) */
+.six-cards .node-6 {
+    bottom: 20px;
+    right: 80px;
+    background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%);
+}
+.six-cards .node-6 .icon-circle { background: linear-gradient(135deg, #ca8a04, #eab308); }
+.six-cards .node-6 h4 { color: #854d0e; }
+
+/* Icon Circle */
+.six-cards .icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.six-cards .node-text {
+    text-align: left;
+    max-width: 170px;
+}
+
+.six-cards .node-text h4 {
+    font-size: 0.92rem;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.six-cards .node-text p {
+    font-size: 0.74rem;
+    color: #475569;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Hover Effects */
+.six-cards .node:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 14px 25px rgba(15, 23, 42, 0.15);
+}
+
+.six-cards .node:hover .icon-circle {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .mindmap-wrapper.six-cards {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .six-cards .center-circle {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 10px;
+    }
+
+   /* ===== Clean & Modern Card Style (Blue Line completely removed) ===== */
+/* ===== Colorful Cards (Without Blue Line & Matching Backgrounds) ===== */
+.six-cards .node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    padding: 10px 16px 10px 10px;
+    border-radius: 50px;
+    border: none !important; /* ആ ബ്ലൂ ലൈൻ പൂർണ്ണമായി ഒഴിവാക്കാൻ */
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 1. System Admin - Blue Gradient */
+.six-cards .node-1 {
+    top: 20px;
+    left: 80px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 16px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+}
+.six-cards .node-1 .node-text { text-align: right; }
+.six-cards .node-1 .icon-circle { background: linear-gradient(135deg, #2563eb, #06b6d4); }
+.six-cards .node-1 h4 { color: #1e40af; }
+
+/* 2. Networking - Green Gradient */
+.six-cards .node-2 {
+    top: 190px;
+    left: 30px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 16px;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%) !important;
+}
+.six-cards .node-2 .node-text { text-align: right; }
+.six-cards .node-2 .icon-circle { background: linear-gradient(135deg, #059669, #10b981); }
+.six-cards .node-2 h4 { color: #065f46; }
+
+/* 3. Hardware - Orange Gradient */
+.six-cards .node-3 {
+    bottom: 20px;
+    left: 80px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 16px;
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%) !important;
+}
+.six-cards .node-3 .node-text { text-align: right; }
+.six-cards .node-3 .icon-circle { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+.six-cards .node-3 h4 { color: #9a3412; }
+
+/* 4. Printer Service - Pink/Red Gradient */
+.six-cards .node-4 {
+    top: 20px;
+    right: 80px;
+    background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%) !important;
+}
+.six-cards .node-4 .icon-circle { background: linear-gradient(135deg, #e11d48, #fb7185); }
+.six-cards .node-4 h4 { color: #9f1239; }
+
+/* 5. CCTV Systems - Purple Gradient */
+.six-cards .node-5 {
+    top: 190px;
+    right: 30px;
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%) !important;
+}
+.six-cards .node-5 .icon-circle { background: linear-gradient(135deg, #9333ea, #ec4899); }
+.six-cards .node-5 h4 { color: #6b21a8; }
+
+/* 6. Software - Yellow Gradient */
+.six-cards .node-6 {
+    bottom: 20px;
+    right: 80px;
+    background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%) !important;
+}
+.six-cards .node-6 .icon-circle { background: linear-gradient(135deg, #ca8a04, #eab308); }
+.six-cards .node-6 h4 { color: #854d0e; }
+
+/* Hover ചെയ്യുമ്പോൾ മാത്രം ചെറിയ എലവേഷനും ഷാഡോയും */
+.six-cards .node:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.14);
+}
+
+    .six-cards .node-1 .node-text, 
+    .six-cards .node-2 .node-text,
+    .six-cards .node-3 .node-text { 
+        text-align: left !important; 
+    }
+}
+/* ===== Center Circle Brightness & Glow Effect ===== */
+.six-cards .center-circle {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.2);
+    z-index: 2;
+    border: 3px solid #ffffff;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* Bright Light Glow Background */
+.six-cards .center-glow {
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #38bdf8 0%, #6366f1 60%, transparent 100%);
+    opacity: 0.3;
+    filter: blur(15px);
+    z-index: -1;
+    animation: brightPulse 2.5s infinite alternate ease-in-out;
+}
+
+/* Soft Glowing Animation */
+@keyframes brightPulse {
+    0% {
+        opacity: 0.25;
+        filter: blur(12px);
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 0.65;
+        filter: blur(20px);
+        transform: scale(1.08);
+    }
+}
+
+/* Icon & Text Lighting */
+.six-cards .center-content i {
+    font-size: 28px;
+    color: #4f46e5;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.six-cards .center-content h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+/* Hover ചെയ്യുമ്പോൾ കൂടുതൽ Bright ആകുന്ന എഫക്റ്റ് */
+.six-cards .center-circle:hover {
+    background: #ffffff;
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.6), 
+                0 0 15px rgba(99, 102, 241, 0.4);
+    border-color: #38bdf8;
+}
+
+.six-cards .center-circle:hover .center-glow {
+    opacity: 0.9;
+    filter: blur(22px);
+}
+
+.six-cards .center-circle:hover .center-content i {
+    color: #2563eb;
+    transform: scale(1.15);
+}
+
+/* Modal & Clickable Card Styles */
+.skill-card {
+    cursor: pointer;
+}
+
+/* Modal Overlay Background */
+.skill-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.skill-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Box with Zoom Animation */
+.skill-modal-content {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 35px 25px 30px;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(0.7);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.skill-modal-overlay.active .skill-modal-content {
+    transform: scale(1);
+}
+
+/* Close Button */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    background: #f1f5f9;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #475569;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-close-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Modal Header Icon */
+.modal-icon-header {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.skill-modal-content h3 {
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.skill-modal-content p {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== Fix: Forcefully Hide Any Unwanted Top Line on Cards ===== */
+.six-cards .node::before,
+.six-cards .node::after {
+    display: none !important;
+    content: none !important;
+}
+
+.six-cards .node {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08) !important;
+}
+/* ===== Fix: Forcefully Hide Any Unwanted Top Line on Cards ===== */
+.six-cards .node::before,
+.six-cards .node::after {
+    display: none !important;
+    content: none !important;
+}
+
+.six-cards .node {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08) !important;
+}
+/* ===== Clean 3-Column Skills Grid Layout ===== */
+.skills-grid-section {
+    padding: 80px 4%;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, #f8fafc 100%);
+    text-align: center;
+}
+
+.skills-grid-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* Grid setup: 3 columns, 2 rows */
+.skills-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 25px;
+    margin-top: 50px;
+}
+
+/* Card General Style (Same design as before) */
+.grid-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border-radius: 60px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.grid-card .icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+}
+
+.grid-card .node-text {
+    text-align: left;
+}
+
+.grid-card .node-text h4 {
+    font-size: 1.05rem;
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.grid-card .node-text p {
+    font-size: 0.83rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* --- Original Color Schemes --- */
+
+/* 1. System Admin (Blue) */
+.grid-card.card-1 {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+.grid-card.card-1 .icon-circle { background: linear-gradient(135deg, #2563eb, #06b6d4); }
+.grid-card.card-1 h4 { color: #1e40af; }
+
+/* 2. Printer Service (Pink/Red) */
+.grid-card.card-2 {
+    background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+}
+.grid-card.card-2 .icon-circle { background: linear-gradient(135deg, #e11d48, #fb7185); }
+.grid-card.card-2 h4 { color: #9f1239; }
+
+/* 3. Networking (Green) */
+.grid-card.card-3 {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+.grid-card.card-3 .icon-circle { background: linear-gradient(135deg, #059669, #10b981); }
+.grid-card.card-3 h4 { color: #065f46; }
+
+/* 4. CCTV Systems (Purple) */
+.grid-card.card-4 {
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+}
+.grid-card.card-4 .icon-circle { background: linear-gradient(135deg, #9333ea, #ec4899); }
+.grid-card.card-4 h4 { color: #6b21a8; }
+
+/* 5. Hardware (Orange) */
+.grid-card.card-5 {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+}
+.grid-card.card-5 .icon-circle { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+.grid-card.card-5 h4 { color: #9a3412; }
+
+/* 6. Software (Yellow) */
+.grid-card.card-6 {
+    background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%);
+}
+.grid-card.card-6 .icon-circle { background: linear-gradient(135deg, #ca8a04, #eab308); }
+.grid-card.card-6 h4 { color: #854d0e; }
+
+/* Hover Animations */
+.grid-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+
+.grid-card:hover .icon-circle {
+    transform: rotate(360deg) scale(1.08);
+}
+
+/* Mobile & Tablet Responsive */
+@media (max-width: 992px) {
+    .skills-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .skills-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.gradient-title {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.skills-grid-section .section-title h2 {
+    font-size: 2.3rem; /* നിങ്ങൾക്ക് ആവശ്യമുള്ള അനുസരിച്ച് 2.5rem, 3rem എന്നൊക്കെ കൂട്ടി നൽകാം */
+}
+.skills-grid-section .section-title p {
+    margin-top: 15px; /* ആവശ്യമെങ്കിൽ 12px മുതൽ 20px വരെ കൂട്ടി നോക്കാം */
+}
+/* Career Journey Cards - Full Width Expansion */
+.career-journey-section {
+    max-width: 1600px !important; /* മൊത്തത്തിലുള്ള സെക്ഷന്റെ വീതി കൂട്ടുന്നു */
+    padding: 0 30px !important;
+}
+
+.timeline-container {
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1550px !important;
+    margin: 0 auto 50px auto !important;
+}
+
+.journey-card {
+    min-width: 0; /* കാർഡുകൾ ബോക്സിനുള്ളിൽ ഒതുങ്ങി കൃത്യമായി വീതി വെക്കാൻ */
+}
+
+.journey-card .card-image {
+    height: 170px !important; /* ചിത്രത്തിന്റെ ഉയരവും കുറച്ചുകൂടി കൂട്ടുന്നു */
+}
+
+.journey-card .card-content {
+    padding: 26px 20px 22px 20px !important;
+}
+/* ===== General Section Spacing Correction ===== */
+section {
+    padding: 70px 8% !important;
+}
+
+/* Hero section padding fix */
+.career-hero {
+    padding: 130px 8% 80px !important;
+}
+
+/* ===== Professional Summary Spacing ===== */
+.summary {
+    padding: 60px 10% !important;
+}
+
+/* ===== Technical Skills Card Soft Shadow & Hover Update ===== */
+.grid-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    border-radius: 60px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04); /* കൂടുതൽ സോഫ്റ്റ് ആയ ഷാഡോ */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.10); /* സോഫ്റ്റ് ബ്ലൂ ഹോവർ ഷാഡോ */
+}
+
+/* ===== Career Journey Section Spacing ===== */
+.career-journey-section {
+    max-width: 1600px !important;
+    padding: 70px 30px !important;
+    margin: 0 auto;
+}
+
+.timeline-container {
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1550px !important;
+    margin: 40px auto 0 auto !important;
+}
+
+.journey-card {
+    min-width: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.journey-card .card-image {
+    height: 170px !important;
+}
+
+.journey-card .card-content {
+    padding: 24px 18px 20px 18px !important;
+}
+/* Wave മാറ്റി പ്രൊഫഷണൽ കാർഡ് ഡിസൈൻ നൽകുന്നു */
+.career-hero {
+    padding-bottom: 90px !important;
+}
+
+/* Professional Summary-യെ കാർഡ് രൂപത്തിൽ ആക്കുന്നു */
+.summary {
+    position: relative;
+    margin: -60px auto 40px auto !important; /* ഹീറോ സെക്ഷനിലേക്ക് മുകളിലേക്ക് കയറ്റി നിർത്താൻ */
+    max-width: 900px;
+    background: #ffffff !important;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* നല്ല സോഫ്റ്റ് ഷാഡോ */
+    border: 1px solid #e2e8f0;
+    padding: 40px 30px !important;
+    z-index: 10;
 }
