@@ -4142,25 +4142,3 @@ section {
         margin: 0 auto 15px auto !important;
     }
 }
-/* ===== Mobile Navigation Fix ===== */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column !important;
-        height: auto !important;
-        padding: 15px !important;
-        gap: 10px !important;
-    }
-
-    nav .logo {
-        margin-bottom: 5px !important;
-    }
-
-    nav ul {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 10px 15px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-}
