@@ -4142,3 +4142,16 @@ section {
         margin: 0 auto 15px auto !important;
     }
 }
+/* ===== Profile Photo Mobile View Fix ===== */
+@media (max-width: 768px) {
+    /* പ്രൊഫൈൽ ഫോട്ടോ നിൽക്കുന്ന കണ്ടെയ്നറും ഇമേജും മൊബൈലിന് അനുസരിച്ച് ക്രമീകരിക്കുന്നു */
+    .profile-img, .hero-avatar, img[alt*="Siju"], .about-img img {
+        width: 160px !important;
+        height: 160px !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        margin: 0 auto 20px auto !important;
+        display: block !important;
+    }
+}
