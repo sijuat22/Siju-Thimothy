@@ -4153,3 +4153,43 @@ section {
         display: block !important;
     }
 }
+/* ===== Perfect Mobile View Fix for Home Page ===== */
+@media (max-width: 768px) {
+    /* നാവിഗേഷൻ ബാർ മൊബൈലിൽ ഒന്നിനു താഴെ ഒന്നായി ക്രമീകരിക്കുന്നു */
+    nav {
+        flex-direction: column !important;
+        padding: 12px 15px !important;
+        gap: 10px !important;
+    }
+
+    nav ul {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px 12px !important;
+        padding: 0 !important;
+    }
+
+    /* ഹെറോ സെക്ഷൻ മൊബൈലിൽ സിംഗിൾ കോളമാക്കുന്നു */
+    .hero {
+        grid-template-columns: 1fr !important;
+        padding: 100px 20px 40px !important;
+        gap: 30px !important;
+        text-align: center !important;
+    }
+
+    /* പ്രൊഫൈൽ ഫോട്ടോ മൊബൈലിൽ കൃത്യമായ അളവിൽ വട്ടത്തിൽ സെന്റർ ചെയ്യുന്നു */
+    .profile-image {
+        width: 140px !important;
+        height: 140px !important;
+        max-width: 140px !important;
+        max-height: 140px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
+    }
+}
