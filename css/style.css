@@ -4127,3 +4127,18 @@ section {
     padding: 40px 30px !important;
     z-index: 10;
 }
+/* ===== Career Journey Mobile View Fix ===== */
+@media (max-width: 768px) {
+    .timeline-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 0 15px !important;
+    }
+
+    .journey-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 15px auto !important;
+    }
+}
